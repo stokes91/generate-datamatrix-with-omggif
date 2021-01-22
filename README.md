@@ -47,7 +47,7 @@ fs.writeFile('test-X12.gif', datamatrix.renderGif(), function(err) {
 
 ## Basic Support
 
-This example shows how to create a png formatted image using omggif. This code only supports ASCII and X12 encoding. The Data Matrix specification includes a number of additional
+This example shows how to create a GIF formatted image using omggif. This code only supports ASCII and X12 encoding. The Data Matrix specification includes a number of additional
 codewords that improve efficiency for reduced character sets.
 
 ## Two dependencies

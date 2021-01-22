@@ -1,11 +1,10 @@
 {
   "name": "generate-datamatrix-with-omggif",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Generate Data Matrix Codes using omggif - JavaScript implementation",
   "main": "main.js",
   "directories": {
-    "example": "examples",
-    "lib": "lib"
+    "example": "examples","lib": "lib"
   },
   "scripts": {
     "test": "node examples/test"
