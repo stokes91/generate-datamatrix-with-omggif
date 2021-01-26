@@ -42,13 +42,27 @@ fs.writeFile('test-X12.gif', datamatrix.renderGif(), function(err) {
 ```
 
 ## Resulting test-X12.gif
-![Hello World!](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-ASCII.gif?raw=true)
+![Hello World!](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-X12.gif?raw=true)
 
 
-## Basic Support
+## Encoding X12
 
-This example shows how to create a GIF formatted image using omggif. This code only supports ASCII and X12 encoding. The Data Matrix specification includes a number of additional
-codewords that improve efficiency for reduced character sets.
+```
+const fs = require('fs');
+
+const DataMatrix = require('../main');
+
+const datamatrix = new DataMatrix();
+
+datamatrix.encodeX12('EXAMPLE.COM');
+
+fs.writeFile('test-C40.gif', datamatrix.renderGif(), function(err) {
+  console.log(err);
+});
+```
+
+## Resulting test-C40.gif
+![Hello World!](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-C40.gif?raw=true)
 
 ## Two dependencies
 
