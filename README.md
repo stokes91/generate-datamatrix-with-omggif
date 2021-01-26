@@ -54,7 +54,7 @@ const DataMatrix = require('../main');
 
 const datamatrix = new DataMatrix();
 
-datamatrix.encodeX12('EXAMPLE.COM');
+datamatrix.encodeC40('EXAMPLE.COM');
 
 fs.writeFile('test-C40.gif', datamatrix.renderGif(), function(err) {
   console.log(err);
