@@ -45,7 +45,7 @@ fs.writeFile('test-X12.gif', datamatrix.renderGif(), function(err) {
 ![Hello World!](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-X12.gif?raw=true)
 
 
-## Encoding X12
+## Encoding C40
 
 ```
 const fs = require('fs');
