@@ -11,14 +11,16 @@ const fs = require('fs');
 
 const DataMatrix = require('../main');
 
-const datamatrix = new DataMatrix();
+const datamatrix = new DataMatrix({
+  quietZone: 2,
+  scale: 2
+});
 
 datamatrix.encodeAscii('Hello World!');
 
 fs.writeFile('test-ASCII.gif', datamatrix.renderGif(), function(err) {
   console.log(err);
 });
-
 ```
 
 ## Resulting test-ASCII.gif
@@ -32,7 +34,10 @@ const fs = require('fs');
 
 const DataMatrix = require('../main');
 
-const datamatrix = new DataMatrix();
+const datamatrix = new DataMatrix({
+  quietZone: 1,
+  scale: 2
+});
 
 datamatrix.encodeX12('HELLO WORLD*');
 
@@ -68,10 +73,11 @@ const datamatrix = new DataMatrix({
 
 datamatrix.encodeX12('ZVZRKTEB');
 
-fs.writeFile('test-tiny-X12.gif', datamatrix.renderGif(), function(err) {
+const buffer = datamatrix.renderGif();
+
+fs.writeFile('test-tiny-X12.gif', buffer, function(err) {
   console.log(err);
 });
-
 ```
 ## Resulting test-tiny-X12.gif
 ![ZVZRKTEB](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-tiny-X12.gif?raw=true)
@@ -85,8 +91,8 @@ const fs = require('fs');
 const DataMatrix = require('../main');
 
 const datamatrix = new DataMatrix({
-  quietZone: 0,
-  scale: 1
+  quietZone: 2,
+  scale: 2
 });
 
 datamatrix.encodeC40('EXAMPLE.COM');
