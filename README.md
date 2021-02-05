@@ -42,7 +42,7 @@ fs.writeFile('test-X12.gif', datamatrix.renderGif(), function(err) {
 ```
 
 ## Resulting test-X12.gif
-![Hello World!](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-ASCII.gif?raw=true)
+![HELLO WORLD*](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-ASCII.gif?raw=true)
 
 
 ## Basic Support
@@ -73,6 +73,9 @@ fs.writeFile('test-tiny-X12.gif', datamatrix.renderGif(), function(err) {
 });
 
 ```
+## Resulting test-tiny-X12.gif
+![ZVZRKTEB](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-tiny-X12.gif?raw=true)
+
 
 ## Encoding C40
 
@@ -94,7 +97,7 @@ fs.writeFile('test-C40.gif', datamatrix.renderGif(), function(err) {
 ```
 
 ## Resulting test-C40.gif
-![Hello World!](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-C40.gif?raw=true)
+![EXAMPLE.COM](https://github.com/stokes91/generate-datamatrix-with-omggif/blob/main/examples/test-C40.gif?raw=true)
 
 ## Two dependencies
 

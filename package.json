@@ -1,6 +1,6 @@
 {
   "name": "generate-datamatrix-with-omggif",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Generate Data Matrix Codes using omggif - JavaScript implementation",
   "main": "main.js",
   "directories": {
