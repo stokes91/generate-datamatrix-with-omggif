@@ -18,7 +18,10 @@ const fs = require('fs');
 
 const DataMatrix = require('../main');
 
-const datamatrix = new DataMatrix();
+const datamatrix = new DataMatrix({
+  quietZone: 1,
+  scale: 2
+});
 
 datamatrix.encodeX12('HELLO WORLD*');
 

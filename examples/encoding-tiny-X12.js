@@ -1,9 +1,12 @@
 /*
    Copyright 2020 Alexander Stokes
+
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
+
      http://www.apache.org/licenses/LICENSE-2.0
+
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,12 +19,14 @@ const fs = require('fs');
 const DataMatrix = require('../main');
 
 const datamatrix = new DataMatrix({
-  quietZone: 2,
-  scale: 2
+  quietZone: 0,
+  scale: 1
 });
 
-datamatrix.encodeAscii('Hello World!');
+datamatrix.encodeX12('ZVZRKTEB');
 
-fs.writeFile('test-ASCII.gif', datamatrix.renderGif(), function(err) {
+const buffer = datamatrix.renderGif();
+
+fs.writeFile('test-tiny-X12.gif', buffer, function(err) {
   console.log(err);
 });

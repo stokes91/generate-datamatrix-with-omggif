@@ -15,7 +15,10 @@ const fs = require('fs');
 
 const DataMatrix = require('../main');
 
-const datamatrix = new DataMatrix();
+const datamatrix = new DataMatrix({
+  quietZone: 2,
+  scale: 2
+});
 
 datamatrix.encodeC40('EXAMPLE.COM');
 
